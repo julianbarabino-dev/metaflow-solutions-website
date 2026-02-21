@@ -1,0 +1,131 @@
+header img {
+    height: 250px;
+    max-width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+header {
+    background: #fff;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: #eee 1px solid;
+    text-align: center;
+}
+
+.header-name {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 2.5rem;
+    color: #2a3c50;
+    font-weight: bold;
+}
+.hero {
+    background: #2a3c50;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.cta-button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+.cta-button:hover {
+    background: #0056b3;
+}
+.section {
+    padding: 2rem 0;
+    text-align: center;
+}
+.section h2 {
+    font-size: 2rem;
+    color: #2a3c50;
+    margin-bottom: 1rem;
+}
+.services-list, .problems-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.services-list li, .problems-list li {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    flex: 1 1 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.services-list li::before {
+    content: "✓";
+    color: #2a3c50;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.problems-list li::before {
+    content: none;
+}
+.problems-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+.contact-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    display: block;
+    width: 100%;
+    background: #2a3c50;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.contact-form button:hover {
+    background: #1e2a38;
+}
