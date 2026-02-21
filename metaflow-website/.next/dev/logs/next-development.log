@@ -1,0 +1,84 @@
+[00:05:23.767] Server  ERROR   ⨯ Error: Cannot find module 'next/dist/client/components/builtin/global-not-found'
+Require stack:
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-server.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/start-server.js
+[00:05:23.977] Server  ERROR   Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-server.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/start-server.js
+[00:05:24.210] Server  ERROR   ⨯ Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-server.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/start-server.js
+[00:05:24.507] Server  ERROR   Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-server.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/start-server.js
+[00:05:25.007] Server  ERROR   ⨯ Error: Cannot find module 'next/dist/client/components/builtin/global-not-found'
+Require stack:
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-server.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/start-server.js
+[00:05:25.121] Server  ERROR   Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-server.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/start-server.js
+[00:05:25.279] Server  ERROR   ⨯ Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-server.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/start-server.js
+[00:05:25.406] Server  ERROR   Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-server.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/start-server.js
+[00:07:26.126] Server  ERROR   ⨯ Error: Cannot find module 'next/dist/client/components/builtin/global-not-found'
+Require stack:
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-server.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/start-server.js
+[00:07:26.233] Server  ERROR   Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-server.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/start-server.js
+[00:07:26.359] Server  ERROR   ⨯ Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-server.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/start-server.js
+[00:07:26.531] Server  ERROR   Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/router-server.js
+- /home/user/metaflow-solutions-website/metaflow-website/node_modules/next/dist/server/lib/start-server.js
