@@ -302,17 +302,16 @@
     <div class="max-w-7xl mx-auto">
         <p class="text-center text-xs font-medium uppercase tracking-widest mb-10 up" style="color:var(--faint)">Algunos de nuestros clientes</p>
         <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 up mx-auto" style="max-width:900px">
-            <span class="client-name" style="animation-delay:0s">DMT Deco Muebles</span><span style="color:rgba(255,255,255,.1)">·</span>
             <span class="client-name" style="animation-delay:.4s">Tienda Arte Manik</span><span style="color:rgba(255,255,255,.1)">·</span>
             <span class="client-name" style="animation-delay:.8s">Espacio UNCU</span><span style="color:rgba(255,255,255,.1)">·</span>
             <span class="client-name" style="animation-delay:1.2s">La Chola</span><span style="color:rgba(255,255,255,.1)">·</span>
             <span class="client-name" style="animation-delay:1.6s">Museo de los Cerros</span><span style="color:rgba(255,255,255,.1)">·</span>
             <span class="client-name" style="animation-delay:2s">Tinta Limón Ediciones</span><span style="color:rgba(255,255,255,.1)">·</span>
-            <span class="client-name" style="animation-delay:2.4s">Lástima a Nadie Podcast</span><span style="color:rgba(255,255,255,.1)">·</span>
             <span class="client-name" style="animation-delay:2.8s">Wumanas</span><span style="color:rgba(255,255,255,.1)">·</span>
             <span class="client-name" style="animation-delay:3.2s">Rotary Club</span><span style="color:rgba(255,255,255,.1)">·</span>
             <span class="client-name" style="animation-delay:3.6s">Lörihen</span><span style="color:rgba(255,255,255,.1)">·</span>
-            <span class="client-name" style="animation-delay:4s">Obregón Propiedades</span>
+            <span class="client-name" style="animation-delay:4s">Obregón Propiedades</span><span style="color:rgba(255,255,255,.1)">·</span>
+            <span class="client-name" style="animation-delay:4.4s">Miqzi Cerámica</span>
         </div>
     </div>
 </section>
@@ -345,8 +344,8 @@
                     <span style="color:var(--faint)" class="text-sm">Cliente Verificado · Google</span>
                 </div>
             </div>
-            <button onclick="prevT()" class="absolute top-1/2 -translate-y-1/2 left-4 p-3 rounded-full transition-all hover:scale-110 z-20" style="background:rgba(124,58,237,.5);border:1px solid rgba(167,139,250,.6);color:#c4b5fd;box-shadow:0 0 20px rgba(124,58,237,.5)"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
-            <button onclick="nextT()" class="absolute top-1/2 -translate-y-1/2 right-4 p-3 rounded-full transition-all hover:scale-110 z-20" style="background:rgba(124,58,237,.5);border:1px solid rgba(167,139,250,.6);color:#c4b5fd;box-shadow:0 0 20px rgba(124,58,237,.5)"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <button onclick="prevT()" class="hidden md:block absolute top-1/2 -translate-y-1/2 left-4 p-3 rounded-full transition-all hover:scale-110 z-20" style="background:rgba(124,58,237,.5);border:1px solid rgba(167,139,250,.6);color:#c4b5fd;box-shadow:0 0 20px rgba(124,58,237,.5)"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+            <button onclick="nextT()" class="hidden md:block absolute top-1/2 -translate-y-1/2 right-4 p-3 rounded-full transition-all hover:scale-110 z-20" style="background:rgba(124,58,237,.5);border:1px solid rgba(167,139,250,.6);color:#c4b5fd;box-shadow:0 0 20px rgba(124,58,237,.5)"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
         </div>
         <div id="t-dots" class="flex justify-center gap-2 mt-6"></div>
     </div>
@@ -453,7 +452,6 @@ function updDots(){tD.querySelectorAll('button').forEach((d,i)=>{d.style.width=i
 function updT(){tB.style.opacity='0';setTimeout(()=>{const t=TL[ti];tQ.innerText='"'+t.quote+'"';tN.innerText=t.name;tA.innerText=t.name.charAt(0);tB.style.opacity='1';updDots();},300);}
 function nextT(){ti=(ti+1)%TL.length;updT();}
 function prevT(){ti=(ti-1+TL.length)%TL.length;updT();}
-setInterval(nextT,5500);
 
 // FULLSCREEN MOBILE MENU
 let mobNeuralDone=false;
