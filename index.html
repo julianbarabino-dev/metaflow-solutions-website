@@ -31,7 +31,6 @@
         .card:hover .iconw { background:rgba(139,92,246,.25); color:#c4b5fd; }
         .up { opacity:0; transform:translateY(36px); transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1); }
         .up.show { opacity:1; transform:translateY(0); }
-        #t-body { transition:opacity .3s ease; }
         footer { background:rgba(4,4,10,.92); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-top:1px solid rgba(167,139,250,.12); }
 
         /* FULLSCREEN MENU */
@@ -137,10 +136,9 @@
                 Creamos.<br><span class="text-brand-400">Estrategias.</span><br>Soluciones.
             </h1>
             <p class="text-xl mb-4 mx-auto font-light leading-relaxed" style="color:var(--muted);max-width:640px">Soluciones digitales a medida para negocios, creadores y proyectos que quieren crecer con claridad y sin depender de terceros.</p>
-            <p class="text-base mb-14 mx-auto leading-relaxed" style="color:rgba(255,255,255,.35);max-width:520px">Creamos las herramientas, diseñamos la estrategia y te acompañamos para que llegues exactamente a donde tenés que estar.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://wa.me/5492966654899" target="_blank" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-white" style="background:#7c3aed;box-shadow:0 0 30px rgba(124,58,237,.4)">
-                    <i data-lucide="message-circle" class="w-5 h-5"></i> Hablemos ahora
+                    <i data-lucide="message-circle" class="w-5 h-5"></i> Contactanos
                 </a>
                 <button onclick="go('servicios')" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-medium" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7)">
                     Ver qué hacemos <i data-lucide="arrow-right" class="w-5 h-5"></i>
@@ -318,7 +316,7 @@
 
 <!-- TESTIMONIOS -->
 <section id="testimonios" class="py-28 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-5xl mx-auto px-8">
+    <div class="max-w-5xl mx-auto">
         <div class="text-center mb-16 up">
             <h2 class="font-display font-bold text-white mb-3" style="font-size:clamp(28px,4vw,42px)">Historias <span class="text-brand-400">reales</span></h2>
             <p style="color:var(--muted)" class="text-lg">Personas y proyectos a los que ayudamos a desbloquear su potencial.</p>
@@ -334,20 +332,14 @@
                 <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
             </div>
         </div>
-        <div id="testimonial-card" class="relative card p-8 md:p-16 text-center up" style="border-color:rgba(167,139,250,.18);overflow:visible">
-            <div class="absolute top-0 left-0 right-0 h-px rounded-t-3xl" style="background:linear-gradient(to right,#8b5cf6,#6366f1)"></div>
-            <div id="t-body">
-                <blockquote id="t-quote" class="text-xl md:text-2xl font-medium leading-relaxed mb-10 text-white">"Pudimos solucionar un problema que arrastrábamos desde hacía muchos años en tan solo un par de días."</blockquote>
-                <div class="flex flex-col items-center">
-                    <div id="t-avatar" class="w-14 h-14 rounded-full flex items-center justify-center text-brand-400 text-xl font-bold mb-3" style="background:rgba(139,92,246,.15);border:1px solid rgba(167,139,250,.25)">N</div>
-                    <h4 id="t-name" class="font-bold text-white">Nahuel Ortega</h4>
-                    <span style="color:var(--faint)" class="text-sm">Cliente Verificado · Google</span>
-                </div>
+        <div class="relative card up" style="border-color:rgba(167,139,250,.18);overflow:hidden">
+            <div class="absolute top-0 left-0 right-0 h-px rounded-t-3xl" style="background:linear-gradient(to right,#8b5cf6,#6366f1);z-index:1"></div>
+            <!-- Slider track -->
+            <div id="t-track" style="display:flex;transition:transform .45s cubic-bezier(.25,.46,.45,.94);will-change:transform">
+                <!-- Cards injected by JS -->
             </div>
-            <button onclick="prevT()" class="hidden md:block absolute top-1/2 -translate-y-1/2 left-4 p-3 rounded-full transition-all hover:scale-110 z-20" style="background:rgba(124,58,237,.5);border:1px solid rgba(167,139,250,.6);color:#c4b5fd;box-shadow:0 0 20px rgba(124,58,237,.5)"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
-            <button onclick="nextT()" class="hidden md:block absolute top-1/2 -translate-y-1/2 right-4 p-3 rounded-full transition-all hover:scale-110 z-20" style="background:rgba(124,58,237,.5);border:1px solid rgba(167,139,250,.6);color:#c4b5fd;box-shadow:0 0 20px rgba(124,58,237,.5)"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <div id="t-dots" class="flex justify-center gap-2" style="padding:0 2rem 2rem"></div>
         </div>
-        <div id="t-dots" class="flex justify-center gap-2 mt-6"></div>
     </div>
 </section>
 
@@ -446,32 +438,103 @@ const TL=[
     {name:"Cristian Guerrero",quote:"Me había quedado afuera de mi cuenta de Instagram y no sabía qué hacer. Me contacté con MetaFlow y en menos de una hora pudimos resolver el problema. La verdad, unos genios."},
 ];
 let ti=0;
-const tQ=document.getElementById('t-quote'),tN=document.getElementById('t-name'),tA=document.getElementById('t-avatar'),tB=document.getElementById('t-body'),tD=document.getElementById('t-dots'),tCard=document.getElementById('testimonial-card');
-TL.forEach((_,i)=>{const d=document.createElement('button');d.style.cssText=`height:8px;border-radius:9999px;transition:all .3s;background:${i===0?'#8b5cf6':'rgba(255,255,255,0.2)'};width:${i===0?'24px':'8px'}`;d.onclick=()=>{ti=i;updT();};tD.appendChild(d);});
-function updDots(){tD.querySelectorAll('button').forEach((d,i)=>{d.style.width=i===ti?'24px':'8px';d.style.background=i===ti?'#8b5cf6':'rgba(255,255,255,0.2)';});}
-function updT(){tB.style.opacity='0';setTimeout(()=>{const t=TL[ti];tQ.innerText='"'+t.quote+'"';tN.innerText=t.name;tA.innerText=t.name.charAt(0);tB.style.opacity='1';updDots();},300);}
+const tTrack=document.getElementById('t-track');
+const tD=document.getElementById('t-dots');
+
+// Build slide cards
+TL.forEach((t,i)=>{
+    const initials=t.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
+    const slide=document.createElement('div');
+    slide.style.cssText='min-width:100%;padding:3rem 2rem 2rem;text-align:center;box-sizing:border-box;';
+    slide.innerHTML=`
+        <blockquote style="font-size:clamp(1rem,2.5vw,1.35rem);font-weight:500;line-height:1.7;margin-bottom:2.5rem;color:#fff">"${t.quote}"</blockquote>
+        <div style="display:flex;flex-direction:column;align-items:center">
+            <div style="width:56px;height:56px;border-radius:50%;background:rgba(139,92,246,.15);border:1px solid rgba(167,139,250,.25);display:flex;align-items:center;justify-content:center;color:#a78bfa;font-size:1.2rem;font-weight:700;margin-bottom:.75rem">${initials}</div>
+            <h4 style="font-weight:700;color:#fff;margin:0 0 .25rem">${t.name}</h4>
+            <span style="color:var(--faint);font-size:.875rem">Cliente Verificado · Google</span>
+        </div>`;
+    tTrack.appendChild(slide);
+});
+
+// Build dots
+TL.forEach((_,i)=>{
+    const d=document.createElement('button');
+    d.style.cssText=`height:8px;border-radius:9999px;border:none;cursor:pointer;transition:all .3s;background:${i===0?'#8b5cf6':'rgba(255,255,255,0.2)'};width:${i===0?'24px':'8px'}`;
+    d.onclick=()=>{ti=i;updT();};
+    tD.appendChild(d);
+});
+
+function updDots(){
+    tD.querySelectorAll('button').forEach((d,i)=>{
+        d.style.width=i===ti?'24px':'8px';
+        d.style.background=i===ti?'#8b5cf6':'rgba(255,255,255,0.2)';
+    });
+}
+
+function updT(){
+    tTrack.style.transform=`translateX(-${ti*100}%)`;
+    updDots();
+}
+
 function nextT(){ti=(ti+1)%TL.length;updT();}
 function prevT(){ti=(ti-1+TL.length)%TL.length;updT();}
 
-// SWIPE
-let touchstartX = 0;
-let touchendX = 0;
-tCard.addEventListener('touchstart', function(event) {
-    touchstartX = event.changedTouches[0].screenX;
-}, false);
-tCard.addEventListener('touchend', function(event) {
-    touchendX = event.changedTouches[0].screenX;
-    handleGesture();
-}, false); 
-function handleGesture() {
-    if (touchendX < touchstartX) {
-        nextT();
-    }
-    if (touchendX > touchstartX) {
-        prevT();
-    }
-}
+// SWIPE support
+(function(){
+    let x0=null,y0=null,dragging=false,dragX=0;
+    const THRESHOLD=50;
 
+    tTrack.addEventListener('mousedown',e=>{x0=e.clientX;y0=e.clientY;dragging=true;tTrack.style.transition='none';});
+    tTrack.addEventListener('mousemove',e=>{
+        if(!dragging)return;
+        dragX=e.clientX-x0;
+        tTrack.style.transform=`translateX(calc(-${ti*100}% + ${dragX}px))`;
+    });
+    tTrack.addEventListener('mouseup',e=>{
+        if(!dragging)return;
+        dragging=false;
+        tTrack.style.transition='transform .45s cubic-bezier(.25,.46,.45,.94)';
+        if(dragX<-THRESHOLD)nextT();
+        else if(dragX>THRESHOLD)prevT();
+        else updT();
+        dragX=0;x0=null;
+    });
+    tTrack.addEventListener('mouseleave',()=>{
+        if(!dragging)return;
+        dragging=false;
+        tTrack.style.transition='transform .45s cubic-bezier(.25,.46,.45,.94)';
+        updT();dragX=0;x0=null;
+    });
+
+    tTrack.addEventListener('touchstart',e=>{
+        const t=e.touches[0];x0=t.clientX;y0=t.clientY;dragging=true;
+        tTrack.style.transition='none';
+    },{passive:true});
+    tTrack.addEventListener('touchmove',e=>{
+        if(!dragging||x0===null)return;
+        const t=e.touches[0];
+        const dx=t.clientX-x0,dy=t.clientY-y0;
+        if(Math.abs(dx)>Math.abs(dy)){
+            dragX=dx;
+            tTrack.style.transform=`translateX(calc(-${ti*100}% + ${dragX}px))`;
+        }
+    },{passive:true});
+    tTrack.addEventListener('touchend',()=>{
+        if(!dragging)return;
+        dragging=false;
+        tTrack.style.transition='transform .45s cubic-bezier(.25,.46,.45,.94)';
+        if(dragX<-THRESHOLD)nextT();
+        else if(dragX>THRESHOLD)prevT();
+        else updT();
+        dragX=0;x0=null;
+    });
+})();
+
+// Autoplay
+let tAuto=setInterval(nextT,5000);
+tTrack.addEventListener('mouseenter',()=>clearInterval(tAuto));
+tTrack.addEventListener('mouseleave',()=>{tAuto=setInterval(nextT,5000);});
+tTrack.addEventListener('touchstart',()=>clearInterval(tAuto),{passive:true});
 
 // FULLSCREEN MOBILE MENU
 let mobNeuralDone=false;
