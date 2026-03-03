@@ -334,7 +334,7 @@
                 <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
             </div>
         </div>
-        <div class="relative card p-8 md:p-16 text-center up" style="border-color:rgba(167,139,250,.18);overflow:visible">
+        <div id="testimonial-card" class="relative card p-8 md:p-16 text-center up" style="border-color:rgba(167,139,250,.18);overflow:visible">
             <div class="absolute top-0 left-0 right-0 h-px rounded-t-3xl" style="background:linear-gradient(to right,#8b5cf6,#6366f1)"></div>
             <div id="t-body">
                 <blockquote id="t-quote" class="text-xl md:text-2xl font-medium leading-relaxed mb-10 text-white">"Pudimos solucionar un problema que arrastrábamos desde hacía muchos años en tan solo un par de días."</blockquote>
@@ -446,12 +446,32 @@ const TL=[
     {name:"Cristian Guerrero",quote:"Me había quedado afuera de mi cuenta de Instagram y no sabía qué hacer. Me contacté con MetaFlow y en menos de una hora pudimos resolver el problema. La verdad, unos genios."},
 ];
 let ti=0;
-const tQ=document.getElementById('t-quote'),tN=document.getElementById('t-name'),tA=document.getElementById('t-avatar'),tB=document.getElementById('t-body'),tD=document.getElementById('t-dots');
+const tQ=document.getElementById('t-quote'),tN=document.getElementById('t-name'),tA=document.getElementById('t-avatar'),tB=document.getElementById('t-body'),tD=document.getElementById('t-dots'),tCard=document.getElementById('testimonial-card');
 TL.forEach((_,i)=>{const d=document.createElement('button');d.style.cssText=`height:8px;border-radius:9999px;transition:all .3s;background:${i===0?'#8b5cf6':'rgba(255,255,255,0.2)'};width:${i===0?'24px':'8px'}`;d.onclick=()=>{ti=i;updT();};tD.appendChild(d);});
 function updDots(){tD.querySelectorAll('button').forEach((d,i)=>{d.style.width=i===ti?'24px':'8px';d.style.background=i===ti?'#8b5cf6':'rgba(255,255,255,0.2)';});}
 function updT(){tB.style.opacity='0';setTimeout(()=>{const t=TL[ti];tQ.innerText='"'+t.quote+'"';tN.innerText=t.name;tA.innerText=t.name.charAt(0);tB.style.opacity='1';updDots();},300);}
 function nextT(){ti=(ti+1)%TL.length;updT();}
 function prevT(){ti=(ti-1+TL.length)%TL.length;updT();}
+
+// SWIPE
+let touchstartX = 0;
+let touchendX = 0;
+tCard.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+}, false);
+tCard.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    handleGesture();
+}, false); 
+function handleGesture() {
+    if (touchendX < touchstartX) {
+        nextT();
+    }
+    if (touchendX > touchstartX) {
+        prevT();
+    }
+}
+
 
 // FULLSCREEN MOBILE MENU
 let mobNeuralDone=false;
